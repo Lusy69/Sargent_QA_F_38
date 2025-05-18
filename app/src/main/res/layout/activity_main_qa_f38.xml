@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainQA_F_38">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="QA-F-38 Packagin Specification"
+        android:textSize="25dp" />
+
+    <TableLayout
+        android:id="@+id/dataTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:background="#CCCCCC">
+
+        <!-- Encabezado azul fuerte -->
+        <TableRow android:background="#0D47A1">
+
+
+            <TextView
+                android:text="ID"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:padding="8dp"
+                android:text="Cantidad"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:padding="10dp"
+                android:text="Descripcion"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <!-- Fila 1 -->
+        <TableRow android:background="#E3F2FD">
+            <TextView
+                android:text="ABR478"
+                android:padding="8dp" />
+
+            <TextView
+                android:padding="8dp"
+                android:layout_gravity="center"
+                android:text="478" />
+
+            <TextView
+                android:text="Bosa chica, label aqr345"
+                android:padding="10dp" />
+        </TableRow>
+
+        <!-- Fila 2 -->
+        <TableRow android:background="#BBDEFB">
+            <TextView
+                android:text="ACB5OO"
+                android:padding="8dp" />
+            <TextView
+                android:text="34"
+                android:layout_gravity="center"
+                android:padding="8dp" />
+            <TextView
+                android:text="Bosa mediana, label red345"
+                android:padding="10dp" />
+        </TableRow>
+
+        <!-- Fila 3 -->
+        <TableRow android:background="#E3F2FD">
+            <TextView
+                android:text="QRT456"
+                android:padding="8dp" />
+
+            <TextView
+                android:padding="8dp"
+                android:layout_gravity="center"
+                android:text="38" />
+
+            <TextView
+                android:text="Bosa chica, label aqr257"
+                android:padding="10dp" />
+        </TableRow>
+
+
+
+    </TableLayout>
+
+
+    <Button
+        android:id="@+id/btnCreatePart"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Agregar Parte"/>
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Actualizar" />
+
+    <ImageView
+        android:id="@+id/qrImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnGenerateQR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Generar Reporte" />
+
+
+
+
+
+
+</LinearLayout>
