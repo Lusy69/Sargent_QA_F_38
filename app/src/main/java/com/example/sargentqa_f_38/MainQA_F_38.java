@@ -1,5 +1,6 @@
 package com.example.sargentqa_f_38;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 public class MainQA_F_38 extends AppCompatActivity {
 
+    private Button btnCreatePart;
     private Button btnUpdate;       // Botón para agregar fila nueva desde SharedPreferences
     private Button btnGenerateQR;   // Botón para generar código QR
     private TableLayout dataTable;  // Tabla de datos
@@ -32,10 +34,20 @@ public class MainQA_F_38 extends AppCompatActivity {
         setContentView(R.layout.activity_main_qa_f38);
 
         // Enlazar vistas
+        btnCreatePart = findViewById(R.id.btnCreatePart);
         btnUpdate = findViewById(R.id.btnUpdate);
         btnGenerateQR = findViewById(R.id.btnGenerateQR);
         dataTable = findViewById(R.id.dataTable);
         qrImage = findViewById(R.id.qrImage);
+
+        // Accion crear pieza
+        btnCreatePart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentCP = new Intent(MainQA_F_38.this, MainCreatePart.class);
+                MainQA_F_38.this.startActivity(intentCP);
+            }
+        });
 
         // Acción botón actualizar: añade fila con datos guardados
         btnUpdate.setOnClickListener(new View.OnClickListener() {
